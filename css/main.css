@@ -1,0 +1,267 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: rgb(243, 70, 70);
+  color: white;
+}
+body {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+::selection {
+  background-color: transparent;
+}
+
+nav {
+  font-family: "Dancing Script", cursive;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+nav .logo {
+  font-size: 35px;
+  margin: 15px 0px 0px 15px;
+  cursor: pointer;
+  z-index: 999;
+}
+nav .logo img {
+  max-width: 100%;
+  width: 35px;
+  transform: rotate(45deg);
+  filter: drop-shadow(1px -2px 2px white);
+  z-index: 999;
+}
+nav .menu {
+  margin: 15px 15px 0px 0px;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 100ms ease-in-out;
+  z-index: 999;
+}
+nav .menu:active {
+  transform: scale(0.95);
+}
+nav .menu .menu-bar {
+  width: 33px;
+  height: 3px;
+  background-color: white;
+  margin-top: 5px;
+  border-radius: 10px;
+  z-index: 999;
+}
+
+.text {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  width: 100vw;
+  margin: auto;
+  text-align: center;
+  bottom: 40px;
+  z-index: 999;
+}
+.text p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.text a {
+  display: inline-block;
+  color: rgb(243, 70, 70);
+  text-decoration: none;
+  background-color: white;
+  padding: 10px 22px;
+  border-radius: 15px;
+  outline: 0px solid white;
+  transition: all 100ms ease-in-out;
+}
+.text a:hover {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+.number {
+  line-height: 350px;
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  font-size: 0px;
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+  animation-iteration-count: 5;
+  animation-direction: alternate;
+}
+.number-1 {
+  top: 20%;
+  left: 0%;
+  animation-name: enlargeSmall;
+  animation-delay: 320ms;
+  font-size: 0px;
+}
+.number-2 {
+  bottom: -20%;
+  left: -4%;
+  animation-name: enlargeSmall;
+  animation-delay: 150ms;
+  font-size: 40px;
+}
+.number-3 {
+  bottom: -10%;
+  right: -10%;
+  animation-name: enlargeBig;
+  animation-delay: 20ms;
+  font-size: 0px;
+}
+.number-4 {
+  top: -29%;
+  left: 40%;
+  animation-name: enlargeSmall;
+  animation-delay: 760ms;
+  font-size: 800px;
+}
+.number-5 {
+  top: 20%;
+  left: 65%;
+  animation-name: enlargeBig;
+  animation-delay: 430ms;
+  font-size: 0px;
+}
+.number-6 {
+  top: -22%;
+  left: -7%;
+  animation-name: enlargeSmall;
+  animation-delay: 540ms;
+  font-size: 100px;
+}
+.number-7 {
+  top: 35%;
+  left: 20%;
+  animation-name: enlargeBig;
+  animation-delay: 90ms;
+  font-size: 0px;
+}
+.number-8 {
+  top: -20%;
+  right: -10%;
+  animation-name: enlargeBig;
+  animation-delay: 120ms;
+  font-size: 300px;
+}
+.number-9 {
+  top: 30%;
+  left: 45%;
+  animation-name: enlargeSmall;
+  animation-delay: 260ms;
+  font-size: 200px;
+}
+
+@keyframes enlargeBig {
+  to {
+    font-size: 500px;
+    transform: rotate(360deg);
+  }
+}
+@keyframes enlargeSmall {
+  to {
+    transform: rotate(180deg);
+    font-size: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .number-1 {
+    display: none;
+  }
+  .number-2 {
+    display: none;
+  }
+  .number-3 {
+    display: none;
+  }
+  .number-4 {
+    display: none;
+  }
+  .number-5 {
+    animation-delay: 0;
+    animation-iteration-count: 2;
+    top: 35%;
+    left: 50%;
+    font-size: 400px;
+    z-index: 2;
+  }
+  .number-6 {
+    display: none;
+  }
+  .number-7 {
+    animation-delay: 0;
+    animation-iteration-count: 2;
+    top: 5%;
+    left: 5%;
+    font-size: 450px;
+    z-index: 2;
+  }
+  .number-8 {
+    display: none;
+  }
+  .number-9 {
+    animation-delay: 0;
+    animation-iteration-count: 2;
+    top: 30%;
+    left: 35%;
+    font-size: 200px;
+  }
+}
+
+@media (max-height: 500px) {
+  .number {
+    line-height: normal;
+  }
+  .number-1 {
+    display: none;
+  }
+  .number-2 {
+    display: none;
+  }
+  .number-3 {
+    display: none;
+  }
+  .number-4 {
+    display: none;
+  }
+  .number-5 {
+    animation-iteration-count: 0;
+    top: 30%;
+    left: 20%;
+    position: relative;
+    font-size: 100px;
+  }
+  .number-6 {
+    display: none;
+  }
+  .number-7 {
+    animation-iteration-count: 0;
+    top: 20%;
+    left: 60%;
+    font-size: 100px;
+  }
+  .number-8 {
+    display: none;
+  }
+  .number-9 {
+    animation-iteration-count: 0;
+    top: 30%;
+    left: 40%;
+    font-size: 120px;
+  }
+
+  p {
+    color: black;
+  }
+}
